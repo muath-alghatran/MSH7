@@ -2,6 +2,7 @@
   MSH7 Site JS
   - Pricing rendered from data
   - Modal order builder + WhatsApp/Mailto links
+  - Theme toggle + Mobile nav + Reveal
 ========== */
 
 const PACKAGES = {
@@ -82,8 +83,8 @@ const CATEGORY_LABELS = {
   general: "الخدمات العامة"
 };
 
-// ✅ تم ضبطه حسب بياناتك:
-const DEFAULT_WHATSAPP = "966590478098";   // كان 0590478098 -> الصيغة الدولية الصحيحة
+// ✅ بيانات التواصل (مضبوطة)
+const DEFAULT_WHATSAPP = "966590478098";  // رقمك بصيغة دولية
 const DEFAULT_EMAIL = "MSH7@gmail.com";
 
 // ---------- Helpers
@@ -104,11 +105,13 @@ reveals.forEach(el => io.observe(el));
 // ---------- Mobile nav
 const burger = $("#burger");
 const mobileNav = $("#mobileNav");
+
 burger?.addEventListener("click", () => {
   const isOpen = mobileNav.style.display === "block";
   mobileNav.style.display = isOpen ? "none" : "block";
   mobileNav.setAttribute("aria-hidden", isOpen ? "true" : "false");
 });
+
 $$(".mobileNav a").forEach(a => a.addEventListener("click", () => {
   mobileNav.style.display = "none";
   mobileNav.setAttribute("aria-hidden", "true");
@@ -126,7 +129,8 @@ themeToggle?.addEventListener("click", () => {
 })();
 
 // ---------- Year
-$("#year").textContent = new Date().getFullYear();
+const yearEl = $("#year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ---------- Pricing render
 const pricingGrid = $("#pricingGrid");
@@ -135,6 +139,7 @@ let activeTab = "programming";
 
 function renderPricing(key) {
   activeTab = key;
+
   tabs.forEach(t => {
     const on = t.dataset.tab === key;
     t.classList.toggle("is-active", on);
@@ -142,6 +147,8 @@ function renderPricing(key) {
   });
 
   const list = PACKAGES[key] || [];
+  if (!pricingGrid) return;
+
   pricingGrid.innerHTML = list.map(pkg => `
     <article class="priceCard">
       <div class="priceTop">
@@ -161,13 +168,13 @@ function renderPricing(key) {
           data-order="true"
           data-category="${key}"
           data-package="${escapeText(pkg.name)}"
-          >طلب الباقة</button>
+        >طلب الباقة</button>
 
         <button class="btn btn--ghost" type="button"
           data-quick="true"
           data-category="${key}"
           data-package="${escapeText(pkg.name)}"
-          >تفاصيل سريعة</button>
+        >تفاصيل سريعة</button>
       </div>
 
       <div class="muted tiny" style="margin-top:10px">
@@ -190,6 +197,15 @@ function renderPricing(key) {
 tabs.forEach(t => t.addEventListener("click", () => renderPricing(t.dataset.tab)));
 renderPricing(activeTab);
 
+// ✅ NEW: Jump to pricing tab from services buttons
+document.querySelectorAll("[data-tab-jump]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const tab = btn.dataset.tabJump; // from data-tab-jump
+    if (tab) renderPricing(tab);
+    location.hash = "#pricing";
+  });
+});
+
 // ---------- Modal order
 const modal = $("#modal");
 const closeModalBtn = $("#closeModal");
@@ -203,31 +219,35 @@ const mailLink = $("#mailLink");
 const copyBtn = $("#copyMsg");
 
 function openModal(categoryKey, packageName) {
+  if (!modal) return;
+
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
 
-  fCategory.value = CATEGORY_LABELS[categoryKey] || categoryKey;
-  fPackage.value = packageName || "";
+  if (fCategory) fCategory.value = CATEGORY_LABELS[categoryKey] || categoryKey;
+  if (fPackage) fPackage.value = packageName || "";
 
-  resultBox.hidden = true;
-  resultText.value = "";
-  waLink.href = "#";
-  mailLink.href = "#";
+  if (resultBox) resultBox.hidden = true;
+  if (resultText) resultText.value = "";
+  if (waLink) waLink.href = "#";
+  if (mailLink) mailLink.href = "#";
 
-  setTimeout(() => form.querySelector("input[name='name']")?.focus(), 50);
+  setTimeout(() => form?.querySelector("input[name='name']")?.focus(), 50);
 }
 
 function closeModal() {
-  modal.classList.remove("is-open");
-  modal.setAttribute("aria-hidden", "true");
+  modal?.classList.remove("is-open");
+  modal?.setAttribute("aria-hidden", "true");
 }
 
 closeModalBtn?.addEventListener("click", closeModal);
+
 modal?.addEventListener("click", (e) => {
   if (e.target?.dataset?.close === "true") closeModal();
 });
+
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+  if (e.key === "Escape" && modal?.classList.contains("is-open")) closeModal();
 });
 
 $("#openContact")?.addEventListener("click", () => openModal("general", "تواصل سريع (استفسار)"));
@@ -258,8 +278,8 @@ form?.addEventListener("submit", (e) => {
 
   const fd = new FormData(form);
   const data = {
-    category: fd.get("category") || fCategory.value,
-    package: fd.get("package") || fPackage.value,
+    category: fd.get("category") || fCategory?.value,
+    package: fd.get("package") || fPackage?.value,
     name: fd.get("name")?.toString().trim(),
     phone: fd.get("phone")?.toString().trim(),
     email: fd.get("email")?.toString().trim(),
@@ -268,21 +288,21 @@ form?.addEventListener("submit", (e) => {
   };
 
   const msg = buildMessage(data);
-  resultText.value = msg;
-  resultBox.hidden = false;
+  if (resultText) resultText.value = msg;
+  if (resultBox) resultBox.hidden = false;
 
   const waText = encodeURIComponent(msg);
-  waLink.href = `https://wa.me/${DEFAULT_WHATSAPP}?text=${waText}`;
+  if (waLink) waLink.href = `https://wa.me/${DEFAULT_WHATSAPP}?text=${waText}`;
 
   const subject = encodeURIComponent(`طلب خدمة: ${data.category} - ${data.package}`);
   const body = encodeURIComponent(msg);
-  mailLink.href = `mailto:${DEFAULT_EMAIL}?subject=${subject}&body=${body}`;
+  if (mailLink) mailLink.href = `mailto:${DEFAULT_EMAIL}?subject=${subject}&body=${body}`;
 
-  resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+  resultBox?.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 copyBtn?.addEventListener("click", async () => {
-  if (!resultText.value) return alert("اضغط “تجهيز رسالة الطلب” أولاً 👍");
+  if (!resultText?.value) return alert("اضغط “تجهيز رسالة الطلب” أولاً 👍");
   try {
     await navigator.clipboard.writeText(resultText.value);
     alert("تم نسخ الرسالة ✅");
