@@ -3,24 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MSH7 | برمجة • تصميم • خدمات عامة — تنفيذ سعودي بمعايير عالمية</title>
-  <meta name="description" content="MSH7 منصة سعودية تقدم حلول برمجة وتصميم وخدمات عامة باحتراف عالمي. باقات واضحة، تنفيذ سريع، تواصل شفاف، وتسليم منظم. اختر باقتك وابدأ الطلب عبر واتساب أو البريد خلال دقائق." />
-  <meta name="theme-color" content="#0b0f19" />
+
+  <title>MSH7 | تصميم وهوية رقمية — منصة سعودية بمعايير عالمية</title>
+  <meta name="description" content="MSH7 منصة سعودية تركّز على التصميم والهوية الرقمية بجودة احترافية. استعراض خدمات وباقات بدون دفع داخل الموقع — تواصل مباشر عبر واتساب لكل قسم." />
+  <meta name="theme-color" content="#F6F7FB" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
-  <!-- Ambient Background -->
-  <div class="ambient" aria-hidden="true">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-    <div class="grid"></div>
-  </div>
+<body class="theme-light">
 
   <!-- Header -->
   <header class="header" id="top">
@@ -28,390 +23,535 @@
       <a class="brand" href="#top" aria-label="العودة للأعلى">
         <span class="brand__mark">MSH7</span>
         <span class="brand__text">
-          <strong>منصة خدمات سعودية بمعايير عالمية</strong>
-          <small>برمجة • تصميم • خدمات عامة</small>
+          <strong>منصة سعودية — تصميم وهوية رقمية</strong>
+          <small>تصميم • برمجة • خدمات عامة</small>
         </span>
       </a>
 
       <nav class="nav" aria-label="التنقل الرئيسي">
-        <a href="#services">كيف نخدمك؟</a>
-        <a href="#programming">البرمجة</a>
+        <a href="#services">الخدمات</a>
         <a href="#design">التصميم</a>
+        <a href="#portfolio">أعمال</a>
+        <a href="#programming">البرمجة</a>
         <a href="#general">الخدمات العامة</a>
-        <a href="#pricing">الباقات</a>
+        <a href="#process">آلية العمل</a>
         <a href="#faq">الأسئلة</a>
         <a href="policy.html">السياسات</a>
       </nav>
 
       <div class="header__actions">
-        <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="تبديل الوضع">✨</button>
-        <a class="btn btn--primary" href="#pricing">ابدأ الطلب</a>
+        <button class="btn btn--soft" type="button"
+          data-wa-dept="design"
+          data-wa-msg="السلام عليكم، أبغى استفسار سريع عن خدمات التصميم من MSH7.">
+          واتساب التصميم
+        </button>
+        <button class="btn btn--primary" type="button" data-open="quick">
+          طلب سريع
+        </button>
+        <button class="burger" id="burger" type="button" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-
-      <button class="burger" id="burger" aria-label="فتح القائمة" type="button">
-        <span></span><span></span><span></span>
-      </button>
     </div>
 
     <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <a href="#services">كيف نخدمك؟</a>
-      <a href="#programming">البرمجة</a>
+      <a href="#services">الخدمات</a>
       <a href="#design">التصميم</a>
+      <a href="#portfolio">أعمال</a>
+      <a href="#programming">البرمجة</a>
       <a href="#general">الخدمات العامة</a>
-      <a href="#pricing">الباقات</a>
+      <a href="#process">آلية العمل</a>
       <a href="#faq">الأسئلة</a>
       <a href="policy.html">السياسات</a>
-      <a class="btn btn--primary" href="#pricing">ابدأ الطلب</a>
+
+      <div class="mobileNav__cta">
+        <button class="btn btn--soft" type="button"
+          data-wa-dept="design"
+          data-wa-msg="السلام عليكم، أبغى استفسار سريع عن خدمات التصميم من MSH7.">
+          واتساب التصميم
+        </button>
+        <button class="btn btn--primary" type="button" data-open="quick">
+          طلب سريع
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (Design-first) -->
   <main>
-    <section class="hero">
+    <section class="hero hero--design">
       <div class="container hero__inner">
-        <div class="hero__content reveal">
-          <div class="badge">
-            <span>🇸🇦</span>
-            <span>تنفيذ سعودي • معايير عالمية • تسليم منظم</span>
+        <div class="hero__content">
+          <div class="chip">
+            🇸🇦 <span>تنفيذ سعودي • جودة مؤسسية • تسليم منظم</span>
           </div>
 
           <h1>
-            MSH7 — شغل “ثقيل” يرفع اسمك:
-            <span class="grad">برمجة</span> و <span class="grad2">تصميم</span> و <span class="grad3">إنجاز سريع</span>
-            من فريق سعودي بخبرة عملية.
+            MSH7 — <span class="accent">تصميم</span> يرفع قيمة البراند،
+            ويصنع حضورًا “رسميًا” يليق بالسوق السعودي.
           </h1>
 
           <p class="lead">
-            إحنا ما نبيع وعود… نبيع “نتيجة”.
-            باقات واضحة، تواصل محترم، وتنفيذ يليق بسوق السعودية — وبهوية قوية تنافس عالميًا.
-            اختر الباقة المناسبة، اكتب المطلوب، وخلال دقائق تكون رسالة الطلب جاهزة للواتساب أو الإيميل.
+            موقعنا للعرض فقط — بدون دفع داخل الموقع.
+            اختر القسم واضغط زر واتساب، وسيتم تجهيز رسالة طلب جاهزة تبدأ بها الاتفاق فورًا.
           </p>
 
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#pricing">استعرض الباقات</a>
-            <a class="btn btn--ghost" href="#about">ليش MSH7؟</a>
+            <button class="btn btn--primary" type="button"
+              data-wa-dept="design"
+              data-wa-msg="السلام عليكم، أبغى خدمة تصميم من MSH7. نوع الخدمة: (شعار/هوية/محتوى/ملف تعريفي). التفاصيل: ">
+              تواصل واتساب للتصميم
+            </button>
+
+            <a class="btn btn--ghost" href="#design">استعرض باقات التصميم</a>
+
+            <button class="btn btn--soft" type="button"
+              data-wa-dept="programming"
+              data-wa-msg="السلام عليكم، أبغى استفسار عن خدمات البرمجة من MSH7. نوع المشروع: (موقع/صفحة هبوط/لوحة تحكم). التفاصيل: ">
+              واتساب البرمجة
+            </button>
           </div>
 
-          <div class="trust">
-            <div class="trust__item">
+          <div class="stats">
+            <div class="stat">
               <strong>وضوح</strong>
               <span>مخرجات محددة قبل البداية</span>
             </div>
-            <div class="trust__item">
-              <strong>سرعة</strong>
-              <span>تنفيذ عملي حسب الأولوية</span>
+            <div class="stat">
+              <strong>نظام عمل</strong>
+              <span>مراحل + تحديثات + تسليم مرتب</span>
             </div>
-            <div class="trust__item">
+            <div class="stat">
               <strong>ثقة</strong>
-              <span>التزام + جودة + متابعة</span>
+              <span>خصوصية واحترام وتواصل شفاف</span>
             </div>
           </div>
         </div>
 
-        <div class="hero__card reveal">
-          <div class="card3d">
-            <div class="card3d__top">
-              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-              <span>لوحة طلب سريعة</span>
+        <div class="hero__card" aria-hidden="true">
+          <div class="panel">
+            <div class="panel__top">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="panel__title">ملخص سريع</span>
             </div>
-            <div class="card3d__body">
-              <div class="mini">
-                <div class="mini__icon">💻</div>
-                <div class="mini__text">
-                  <strong>برمجة</strong>
-                  <span>مواقع • تطبيقات • تطوير خاص</span>
-                </div>
+            <div class="panel__body">
+              <div class="panelItem panelItem--design">
+                <strong>تصميم</strong>
+                <span>شعار • هوية • محتوى • ملف تعريفي</span>
               </div>
-              <div class="mini">
-                <div class="mini__icon">🎨</div>
-                <div class="mini__text">
-                  <strong>تصميم</strong>
-                  <span>شعار • هوية • محتوى</span>
-                </div>
+              <div class="panelItem panelItem--programming">
+                <strong>برمجة</strong>
+                <span>مواقع • صفحات هبوط • تطوير خاص</span>
               </div>
-              <div class="mini">
-                <div class="mini__icon">⚡</div>
-                <div class="mini__text">
-                  <strong>خدمات عامة</strong>
-                  <span>طلاب • تقارير • تنظيم</span>
-                </div>
+              <div class="panelItem panelItem--general">
+                <strong>خدمات عامة</strong>
+                <span>CV • LinkedIn • تنظيم وتقارير</span>
               </div>
 
               <div class="divider"></div>
-
               <p class="hint">
-                اضغط “طلب باقة” من أي قسم — وسيتم تجهيز رسالة طلب احترافية جاهزة للإرسال فورًا.
+                اضغط زر القسم… ويفتح واتساب برسالة طلب جاهزة.
               </p>
-
-              <a class="btn btn--primary btn--full" href="#pricing">اذهب للباقات</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section class="section" id="about">
+    <!-- Services overview -->
+    <section class="section" id="services">
       <div class="container">
-        <div class="section__head reveal">
-          <h2>ليش MSH7؟</h2>
-          <p>لأننا نشتغل بعقلية “سوق + جودة + سرعة” — ونطلع لك شغل يليق باسمك في السعودية وخارجها.</p>
+        <div class="section__head">
+          <h2>الخدمات</h2>
+          <p>ثلاث مسارات واضحة — كل مسار له لون مختلف (فاتح) وزر واتساب خاص.</p>
         </div>
 
-        <div class="features reveal">
-          <article class="feature">
-            <div class="feature__icon">🧠</div>
-            <h3>تفكير هندسي + حضور تسويقي</h3>
-            <p>نكتب ونصمم ونبرمج بهدف واضح: تجربة قوية تقنع العميل وتخليه يتواصل.</p>
-          </article>
-          <article class="feature">
-            <div class="feature__icon">🧩</div>
-            <h3>جاهزية للتوسع</h3>
-            <p>الموقع مرتب: تضيف باقات/أقسام بسهولة بدون ما تخرب التصميم.</p>
-          </article>
-          <article class="feature">
-            <div class="feature__icon">🛡️</div>
-            <h3>شفافية من البداية</h3>
-            <p>نتفق على المخرجات، ونحدد الأولويات، ونمشي بخطوات واضحة.</p>
-          </article>
-          <article class="feature">
-            <div class="feature__icon">⚙️</div>
-            <h3>تسليم منظم</h3>
-            <p>ملفات مرتبة، مخرجات قابلة للاستخدام، وتحديثات سهلة مستقبلًا.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEW: Quick Services -->
-    <section class="section section--alt" id="services">
-      <div class="container">
-        <div class="section__head reveal">
-          <h2>كيف نخدمك في MSH7؟</h2>
-          <p>خدمات واضحة، مخرجات محددة، وتسليم يليق بالسوق السعودي — وبجودة تنافس عالميًا.</p>
-        </div>
-
-        <div class="svcGrid reveal">
-          <article class="svcCard">
-            <div class="svcIcon">🌐</div>
-            <h3>مواقع احترافية</h3>
-            <p>موقع تعريفي/مبيعات/صفحة هبوط — تجربة متجاوبة وسريعة وتكسب ثقة العميل من أول ثانية.</p>
-            <button class="btn btn--primary" type="button" data-tab-jump="programming">باقات البرمجة</button>
-          </article>
-
-          <article class="svcCard">
-            <div class="svcIcon">📱</div>
-            <h3>تطبيقات ومزايا</h3>
-            <p>تسجيل، اشتراكات، حجوزات، نماذج ذكية — تنفيذ مرتب قابل للتوسع لاحقًا.</p>
-            <button class="btn btn--ghost" type="button" data-tab-jump="programming">عرض الباقات</button>
-          </article>
-
-          <article class="svcCard">
-            <div class="svcIcon">🎯</div>
-            <h3>شعار يثبت</h3>
-            <p>شعار نظيف + استخدامات متعددة — يعطيك حضور قوي ومحترم في السوق.</p>
-            <button class="btn btn--primary" type="button" data-tab-jump="design">باقات التصميم</button>
-          </article>
-
-          <article class="svcCard">
-            <div class="svcIcon">🧩</div>
-            <h3>هوية كاملة</h3>
-            <p>ألوان وخطوط وقوالب محتوى — براند موحّد “مرتب” على كل المنصات.</p>
-            <button class="btn btn--ghost" type="button" data-tab-jump="design">عرض الباقات</button>
-          </article>
-
-          <article class="svcCard">
-            <div class="svcIcon">⚡</div>
-            <h3>تنظيم وإنجاز</h3>
-            <p>نرتّب لك المتطلبات والخطوات ونختصر وقتك — شغل واضح بدون تعقيد.</p>
-            <button class="btn btn--primary" type="button" data-tab-jump="general">باقات الخدمات</button>
-          </article>
-
-          <article class="svcCard">
-            <div class="svcIcon">📚</div>
-            <h3>طلاب وتقارير</h3>
-            <p>تلخيص وتنظيم وصياغة محترفة — دعم يرفع جودة شغلك بدون مخالفات.</p>
-            <button class="btn btn--ghost" type="button" data-tab-jump="general">عرض الباقات</button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sections -->
-    <section class="section section--alt" id="programming">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="kicker">القسم الأول</span>
-          <h2>قسم البرمجة</h2>
-          <p>نبني حلول تخدم مشروعك فعليًا: سرعة، تجربة مستخدم، وواجهة تبيع عنك.</p>
-        </div>
-
-        <div class="sectionCard sectionCard--code reveal">
-          <div class="sectionCard__content">
-            <h3>وش نقدر نسوي لك؟</h3>
-            <ul class="bullets">
-              <li>مواقع احترافية (تعريفي + مبيعات + صفحات هبوط).</li>
-              <li>تطبيقات ومزايا (تسجيل، اشتراكات، حجوزات، متجر).</li>
-              <li>تطوير خاص (لوحات تحكم، تكاملات APIs، تحسين أداء).</li>
-              <li>تحسين تحويلات (Conversion) وتحسين تجربة العميل.</li>
-            </ul>
-            <div class="sectionCard__cta">
-              <a class="btn btn--primary" href="#pricing">باقات البرمجة</a>
-              <a class="btn btn--ghost" href="#faq">استفسر قبل الطلب</a>
+        <div class="grid3">
+          <article class="card card--design">
+            <h3>التصميم (التركيز الأساسي)</h3>
+            <p>هوية قوية + تصميم رسمي + مخرجات جاهزة للاستخدام في السوق السعودي.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#design">عرض الباقات</a>
+              <button class="btn btn--primary" type="button"
+                data-wa-dept="design"
+                data-wa-msg="السلام عليكم، أبغى خدمة تصميم من MSH7. نوع الخدمة: (شعار/هوية/محتوى/ملف تعريفي). التفاصيل: ">
+                تواصل واتساب
+              </button>
             </div>
-          </div>
-          <div class="sectionCard__visual" aria-hidden="true">
-            <div class="codePanel">
-              <div class="codePanel__line"><span class="c">const</span> <span class="v">saudiTeam</span> = <span class="n">true</span>;</div>
-              <div class="codePanel__line"><span class="c">const</span> <span class="v">globalQuality</span> = <span class="n">true</span>;</div>
-              <div class="codePanel__line"><span class="c">const</span> <span class="v">delivery</span> = <span class="n">"منظم"</span>;</div>
-              <div class="codePanel__line"><span class="c">function</span> <span class="f">build</span>() { <span class="c">return</span> <span class="n">"✅"</span>; }</div>
-              <div class="codePanel__line"><span class="c">export</span> { <span class="v">saudiTeam</span>, <span class="v">globalQuality</span>, <span class="v">delivery</span> };</div>
+          </article>
+
+          <article class="card card--programming">
+            <h3>البرمجة</h3>
+            <p>مواقع وواجهات سريعة ومتجاوبة — تركيز على الجودة والوضوح.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#programming">عرض الخدمات</a>
+              <button class="btn btn--soft" type="button"
+                data-wa-dept="programming"
+                data-wa-msg="السلام عليكم، أبغى خدمة برمجة من MSH7. نوع المشروع: (صفحة/موقع/تطوير). التفاصيل: ">
+                واتساب البرمجة
+              </button>
             </div>
-          </div>
+          </article>
+
+          <article class="card card--general">
+            <h3>الخدمات العامة</h3>
+            <p>إنجاز وتنظيم احترافي: CV/LinkedIn، تنسيق، عروض وتقارير.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#general">عرض الخدمات</a>
+              <button class="btn btn--soft" type="button"
+                data-wa-dept="general"
+                data-wa-msg="السلام عليكم، أبغى خدمة من الخدمات العامة عبر MSH7. نوع الخدمة: (CV/LinkedIn/تنسيق/عرض). التفاصيل: ">
+                واتساب الخدمات
+              </button>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="design">
+    <!-- Design section (bigger) -->
+    <section class="section section--tint tint--design" id="design">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="kicker">القسم الثاني</span>
+        <div class="section__head">
+          <span class="pill pill--design">القسم الأساسي</span>
           <h2>قسم التصميم</h2>
-          <p>هوية قوية + تصميم نظيف = براند ينشاف ويحترم ويثبت في الذاكرة.</p>
+          <p>تصميم رسمي يبين القوة: هوية، شعارات، محتوى، ملفات تعريفية — بمخرجات منظمة.</p>
         </div>
 
-        <div class="sectionCard sectionCard--design reveal">
-          <div class="sectionCard__content">
-            <h3>وش بنطلع لك؟</h3>
-            <ul class="bullets">
-              <li>شعار احترافي يليق بالسوق السعودي.</li>
-              <li>هوية (ألوان، خطوط، قوالب) بشكل موحّد وقوي.</li>
-              <li>تصاميم محتوى “مقنع” للسوشيال.</li>
-              <li>تعاون طويل المدى لفريق جاهز.</li>
+        <div class="pricingGrid">
+          <article class="priceCard priceCard--design">
+            <div class="priceTop">
+              <div>
+                <h3>شعار احترافي</h3>
+                <p>شعار نظيف يليق ببراند سعودي رسمي + ملفات جاهزة.</p>
+              </div>
+              <span class="tag">Design</span>
+            </div>
+            <ul class="list">
+              <li>أفكار متعددة + تطوير الأفضل</li>
+              <li>تسليم PNG/SVG</li>
+              <li>نسخ متعددة (فاتح/غامق)</li>
             </ul>
-            <div class="sectionCard__cta">
-              <a class="btn btn--primary" href="#pricing">باقات التصميم</a>
-              <a class="btn btn--ghost" href="#portfolio">نماذج شكلية</a>
-            </div>
-          </div>
+            <button class="btn btn--primary" type="button"
+              data-wa-dept="design"
+              data-wa-msg="السلام عليكم، أبغى (شعار احترافي) من MSH7. اسم البراند: ___ / المجال: ___ / مراجع: ___ / ملاحظات: ">
+              تواصل واتساب
+            </button>
+          </article>
 
-          <div class="sectionCard__visual" aria-hidden="true">
-            <div class="designTiles">
-              <div class="tile t1"></div>
-              <div class="tile t2"></div>
-              <div class="tile t3"></div>
-              <div class="tile t4"></div>
-              <div class="tile t5"></div>
-              <div class="tile t6"></div>
+          <article class="priceCard priceCard--design">
+            <div class="priceTop">
+              <div>
+                <h3>هوية بصرية</h3>
+                <p>ألوان وخطوط ونمط بصري يوحّد حضورك ويزيد الثقة.</p>
+              </div>
+              <span class="tag">Brand</span>
             </div>
-          </div>
+            <ul class="list">
+              <li>Palette + Typography</li>
+              <li>قوالب أساسية</li>
+              <li>إرشادات استخدام مختصرة</li>
+            </ul>
+            <button class="btn btn--primary" type="button"
+              data-wa-dept="design"
+              data-wa-msg="السلام عليكم، أبغى (هوية بصرية) من MSH7. اسم البراند: ___ / الجمهور: ___ / مراجع: ___ / ملاحظات: ">
+              تواصل واتساب
+            </button>
+          </article>
+
+          <article class="priceCard priceCard--design">
+            <div class="priceTop">
+              <div>
+                <h3>محتوى سوشيال</h3>
+                <p>تصاميم محتوى رسمية ومقنعة (منشورات/ستوري) بهوية موحّدة.</p>
+              </div>
+              <span class="tag">Social</span>
+            </div>
+            <ul class="list">
+              <li>قوالب ثابتة</li>
+              <li>أسلوب بصري موحد</li>
+              <li>جاهز للنشر</li>
+            </ul>
+            <button class="btn btn--primary" type="button"
+              data-wa-dept="design"
+              data-wa-msg="السلام عليكم، أبغى (محتوى سوشيال) من MSH7. المنصة: ___ / نوع المحتوى: ___ / عدد التصاميم: ___ / ملاحظات: ">
+              تواصل واتساب
+            </button>
+          </article>
+
+          <article class="priceCard priceCard--design">
+            <div class="priceTop">
+              <div>
+                <h3>ملف تعريفي / عرض</h3>
+                <p>Company Profile أو Pitch Deck مرتب — رسمي، واضح، ويقنع.</p>
+              </div>
+              <span class="tag">Profile</span>
+            </div>
+            <ul class="list">
+              <li>هيكلة المحتوى</li>
+              <li>تصميم صفحات</li>
+              <li>تسليم PDF + مصدر</li>
+            </ul>
+            <button class="btn btn--primary" type="button"
+              data-wa-dept="design"
+              data-wa-msg="السلام عليكم، أبغى (ملف تعريفي/عرض) من MSH7. عدد الصفحات المتوقع: ___ / محتوى جاهز؟ (نعم/لا) / الهدف: ___ / ملاحظات: ">
+              تواصل واتساب
+            </button>
+          </article>
         </div>
 
-        <div class="portfolio reveal" id="portfolio">
-          <div class="shot"><div class="shot__badge">Logo</div><div class="shot__body"></div></div>
-          <div class="shot"><div class="shot__badge">Brand</div><div class="shot__body"></div></div>
-          <div class="shot"><div class="shot__badge">Post</div><div class="shot__body"></div></div>
-          <div class="shot"><div class="shot__badge">Cover</div><div class="shot__body"></div></div>
+        <div class="note note--design">
+          <strong>ملاحظة:</strong>
+          الموقع للعرض فقط — بعد التواصل عبر واتساب نحدد المخرجات والمدة ونبدأ بشكل منظم.
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="general">
+    <!-- Portfolio -->
+    <section class="section" id="portfolio">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="kicker">القسم الثالث</span>
-          <h2>خدمات عامة — إنجاز سريع</h2>
-          <p>إذا هدفك تختصر وقت وتطلع بنتيجة مرتبة: هنا مكانك.</p>
+        <div class="section__head">
+          <h2>نماذج أعمال</h2>
+          <p>ضع هنا أفضل أعمالك (حتى لو 6 فقط) — “المشكلة → الحل → النتيجة”.</p>
         </div>
 
-        <div class="sectionCard sectionCard--fast reveal">
-          <div class="sectionCard__content">
-            <h3>خدمات عملية</h3>
-            <ul class="bullets">
-              <li>تنظيم متطلبات وخطوات لخدمات حكومية (ضمن الأنظمة).</li>
-              <li>مساعدة طلاب: تلخيص، تنظيم، عروض، تقارير.</li>
-              <li>صياغة تقارير/أبحاث بشكل احترافي (بدون مخالفات أكاديمية).</li>
-              <li>تحسين CV + لينكدإن + قوالب تقديم.</li>
-            </ul>
-            <div class="sectionCard__cta">
-              <a class="btn btn--primary" href="#pricing">باقات الخدمات العامة</a>
-              <a class="btn btn--ghost" href="policy.html">سياسة الاستخدام</a>
-            </div>
-          </div>
+        <div class="portfolio">
+          <div class="shot"><span class="shot__badge">Logo</span><div class="shot__body"></div></div>
+          <div class="shot"><span class="shot__badge">Brand</span><div class="shot__body"></div></div>
+          <div class="shot"><span class="shot__badge">Social</span><div class="shot__body"></div></div>
+          <div class="shot"><span class="shot__badge">Profile</span><div class="shot__body"></div></div>
+          <div class="shot"><span class="shot__badge">UI</span><div class="shot__body"></div></div>
+          <div class="shot"><span class="shot__badge">Ads</span><div class="shot__body"></div></div>
+        </div>
 
-          <div class="sectionCard__visual" aria-hidden="true">
-            <div class="speedLines"><span></span><span></span><span></span><span></span><span></span></div>
-          </div>
+        <div class="center">
+          <button class="btn btn--primary" type="button"
+            data-wa-dept="design"
+            data-wa-msg="السلام عليكم، أبغى أشوف/أرسل مراجع لنماذج أعمال مشابهة. نوع الخدمة: ___ / ملاحظات: ">
+            اطلب تصميم مشابه عبر واتساب
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section" id="pricing">
+    <!-- Programming -->
+    <section class="section section--tint tint--programming" id="programming">
       <div class="container">
-        <div class="section__head reveal">
-          <h2>الباقات</h2>
-          <p>اختر القسم ثم الباقة. “طلب الباقة” يفتح نموذج مرتب ويجهز رسالة طلب جاهزة للإرسال.</p>
+        <div class="section__head">
+          <span class="pill pill--programming">قسم داعم</span>
+          <h2>البرمجة</h2>
+          <p>نقدم البرمجة بشكل منظم — تركيز على الوضوح، السرعة، وتجربة المستخدم.</p>
         </div>
 
-        <div class="tabs reveal" role="tablist" aria-label="تبويبات الباقات">
-          <button class="tab is-active" data-tab="programming" role="tab" aria-selected="true">البرمجة</button>
-          <button class="tab" data-tab="design" role="tab" aria-selected="false">التصميم</button>
-          <button class="tab" data-tab="general" role="tab" aria-selected="false">الخدمات العامة</button>
+        <div class="pricingGrid">
+          <article class="priceCard priceCard--programming">
+            <div class="priceTop">
+              <div>
+                <h3>Landing Page</h3>
+                <p>صفحة هبوط احترافية تحول الزائر لتواصل.</p>
+              </div>
+              <span class="tag">Web</span>
+            </div>
+            <ul class="list">
+              <li>تصميم متجاوب</li>
+              <li>CTA واضح</li>
+              <li>رفع على GitHub Pages</li>
+            </ul>
+            <button class="btn btn--soft" type="button"
+              data-wa-dept="programming"
+              data-wa-msg="السلام عليكم، أبغى (Landing Page) من MSH7. المجال: ___ / الهدف: ___ / أقسام الصفحة: ___ / ملاحظات: ">
+              واتساب البرمجة
+            </button>
+          </article>
+
+          <article class="priceCard priceCard--programming">
+            <div class="priceTop">
+              <div>
+                <h3>موقع أعمال</h3>
+                <p>موقع رسمي متعدد الصفحات — مرتب وواضح.</p>
+              </div>
+              <span class="tag">Site</span>
+            </div>
+            <ul class="list">
+              <li>حتى 5 صفحات</li>
+              <li>نصوص منظمة</li>
+              <li>تحسين أداء أساسي</li>
+            </ul>
+            <button class="btn btn--soft" type="button"
+              data-wa-dept="programming"
+              data-wa-msg="السلام عليكم، أبغى (موقع أعمال) من MSH7. عدد الصفحات: ___ / أمثلة مواقع: ___ / ملاحظات: ">
+              واتساب البرمجة
+            </button>
+          </article>
+
+          <article class="priceCard priceCard--programming">
+            <div class="priceTop">
+              <div>
+                <h3>تطوير خاص</h3>
+                <p>إضافات/تحسينات/دمج نماذج — حسب الحاجة.</p>
+              </div>
+              <span class="tag">Custom</span>
+            </div>
+            <ul class="list">
+              <li>تحديد نطاق</li>
+              <li>تنفيذ مرحلي</li>
+              <li>تسليم منظم</li>
+            </ul>
+            <button class="btn btn--soft" type="button"
+              data-wa-dept="programming"
+              data-wa-msg="السلام عليكم، أبغى (تطوير خاص) من MSH7. المطلوب: ___ / المنصة: ___ / ملاحظات: ">
+              واتساب البرمجة
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- General -->
+    <section class="section section--tint tint--general" id="general">
+      <div class="container">
+        <div class="section__head">
+          <span class="pill pill--general">قسم سريع</span>
+          <h2>الخدمات العامة</h2>
+          <p>إنجاز وتنظيم احترافي — مع الالتزام بالأنظمة والخصوصية.</p>
         </div>
 
-        <div id="pricingGrid" class="pricingGrid reveal" aria-live="polite"></div>
+        <div class="pricingGrid">
+          <article class="priceCard priceCard--general">
+            <div class="priceTop">
+              <div>
+                <h3>CV + LinkedIn</h3>
+                <p>ترتيب وصياغة احترافية تعكس قوتك بشكل رسمي.</p>
+              </div>
+              <span class="tag">Career</span>
+            </div>
+            <ul class="list">
+              <li>صياغة قوية</li>
+              <li>تنسيق مرتب</li>
+              <li>تحسين حضور لينكدإن</li>
+            </ul>
+            <button class="btn btn--soft" type="button"
+              data-wa-dept="general"
+              data-wa-msg="السلام عليكم، أبغى (CV + LinkedIn) من MSH7. المجال: ___ / الخبرات: ___ / ملاحظات: ">
+              واتساب الخدمات
+            </button>
+          </article>
 
-        <div class="note reveal">
-          <p>
-            <strong>وعد MSH7:</strong> شغل يليق بالسوق السعودي، وبجودة تقدر تنافس عالميًا.
-            <span class="muted">*الأسعار افتراضية — عدّلها بسهولة من <code>assets/js/main.js</code>.</span>
-          </p>
+          <article class="priceCard priceCard--general">
+            <div class="priceTop">
+              <div>
+                <h3>عروض وتقارير</h3>
+                <p>تنسيق/ترتيب/هيكلة بطريقة رسمية وواضحة.</p>
+              </div>
+              <span class="tag">Docs</span>
+            </div>
+            <ul class="list">
+              <li>هيكلة محتوى</li>
+              <li>تنسيق Word/PDF</li>
+              <li>قوالب جاهزة</li>
+            </ul>
+            <button class="btn btn--soft" type="button"
+              data-wa-dept="general"
+              data-wa-msg="السلام عليكم، أبغى (عروض/تقارير) من MSH7. النوع: ___ / عدد الصفحات: ___ / الملاحظات: ">
+              واتساب الخدمات
+            </button>
+          </article>
+
+          <article class="priceCard priceCard--general">
+            <div class="priceTop">
+              <div>
+                <h3>تنظيم خطوات</h3>
+                <p>نرتّب لك المتطلبات والخطوات بشكل عملي — ضمن الأنظمة.</p>
+              </div>
+              <span class="tag">Fast</span>
+            </div>
+            <ul class="list">
+              <li>قائمة متطلبات</li>
+              <li>ترتيب خطوات</li>
+              <li>متابعة واضحة</li>
+            </ul>
+            <button class="btn btn--soft" type="button"
+              data-wa-dept="general"
+              data-wa-msg="السلام عليكم، أبغى (تنظيم خطوات) من MSH7. الخدمة المطلوبة: ___ / الوضع الحالي: ___ / ملاحظات: ">
+              واتساب الخدمات
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section__head">
+          <h2>آلية العمل</h2>
+          <p>أسلوب مؤسسي يوضح كل شيء من البداية.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <strong>1) تواصل + موجز</strong>
+            <span>تختار القسم وتكتب المطلوب — برسالة جاهزة في واتساب.</span>
+          </div>
+          <div class="step">
+            <strong>2) تحديد المخرجات</strong>
+            <span>نثبت المطلوب (Scope) والمدة وخطة التنفيذ.</span>
+          </div>
+          <div class="step">
+            <strong>3) تنفيذ وتحديثات</strong>
+            <span>نرسل تحديثات حسب المرحلة لضمان وضوح المسار.</span>
+          </div>
+          <div class="step">
+            <strong>4) تسليم منظم</strong>
+            <span>ملفات مرتبة + مخرجات جاهزة للاستخدام.</span>
+          </div>
+        </div>
+
+        <div class="ctaBar">
+          <button class="btn btn--primary" type="button"
+            data-wa-dept="design"
+            data-wa-msg="السلام عليكم، أبغى أبدأ الآن. القسم: تصميم. نوع الخدمة: ___ / التفاصيل: ">
+            ابدأ عبر واتساب (تصميم)
+          </button>
+          <button class="btn btn--soft" type="button"
+            data-wa-dept="programming"
+            data-wa-msg="السلام عليكم، أبغى أبدأ الآن. القسم: برمجة. نوع الخدمة: ___ / التفاصيل: ">
+            ابدأ عبر واتساب (برمجة)
+          </button>
+          <button class="btn btn--soft" type="button"
+            data-wa-dept="general"
+            data-wa-msg="السلام عليكم، أبغى أبدأ الآن. القسم: خدمات عامة. نوع الخدمة: ___ / التفاصيل: ">
+            ابدأ عبر واتساب (خدمات)
+          </button>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section section--alt" id="faq">
+    <section class="section section--tint tint--neutral" id="faq">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <h2>أسئلة شائعة</h2>
           <p>مختصر ومفيد — عشان تبدأ وأنت مرتاح.</p>
         </div>
 
-        <div class="faq reveal">
+        <div class="faq">
           <details>
-            <summary>كيف يتم استلام الطلب؟</summary>
-            <p>تعبّي النموذج، ثم تفتح واتساب/إيميل برسالة جاهزة. بعدها نراجع التفاصيل ونثبت المخرجات.</p>
+            <summary>هل يوجد دفع داخل الموقع؟</summary>
+            <p>لا. الموقع للعرض فقط. الاتفاق يتم عبر واتساب بعد تحديد المخرجات والمدة.</p>
           </details>
           <details>
-            <summary>هل فيه تخصيص خارج الباقات؟</summary>
-            <p>أكيد. اختر أي باقة واكتب التفاصيل في الملاحظات، أو اختر “تطوير خاص”.</p>
+            <summary>كيف أطلب الخدمة؟</summary>
+            <p>اختر القسم واضغط زر واتساب — ستفتح رسالة جاهزة لتكتب تفاصيلك بسرعة.</p>
           </details>
           <details>
-            <summary>هل الخدمات العامة لها ضوابط؟</summary>
-            <p>نلتزم بالأنظمة والخصوصية، ونرفض أي طلب مخالف. التفاصيل موجودة في صفحة السياسات.</p>
+            <summary>هل يمكن تخصيص الخدمة خارج الباقات؟</summary>
+            <p>نعم. الباقات مجرد أمثلة، ونحدد النهائي حسب نطاق العمل.</p>
           </details>
           <details>
-            <summary>كيف أطور الموقع لاحقًا؟</summary>
-            <p>الباقات والبيانات مرتبة في ملف JS — تضيف/تعدل بدون ما تلمس التصميم.</p>
+            <summary>هل تلتزمون بالخصوصية؟</summary>
+            <p>نعم. تفاصيل الخصوصية والاستخدام في صفحة السياسات.</p>
           </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEW: Strong CTA Strip -->
-    <section class="ctaStrip">
-      <div class="container ctaStrip__inner">
-        <div>
-          <h3>جاهز نبدأ؟ خلّنا نحول فكرتك إلى شغل يرفع اسمك.</h3>
-          <p>تواصل سريع عبر واتساب أو اطلب باقتك الآن — ونرجع لك بخطة تنفيذ واضحة.</p>
-        </div>
-        <div class="ctaStrip__actions">
-          <a class="btn btn--primary" href="#pricing">اطلب الآن</a>
-          <a class="btn btn--ghost" href="https://wa.me/966590478098" target="_blank" rel="noopener">واتساب MSH7</a>
-          <a class="btn btn--ghost" href="mailto:MSH7@gmail.com">إيميل</a>
         </div>
       </div>
     </section>
@@ -421,40 +561,75 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <strong>MSH7</strong>
-          <span class="muted">© <span id="year"></span> جميع الحقوق محفوظة</span>
+          <span>© <span id="year"></span> جميع الحقوق محفوظة</span>
         </div>
 
         <div class="footer__links">
           <a href="#top">الأعلى</a>
-          <a href="#pricing">الباقات</a>
+          <a href="#design">التصميم</a>
+          <a href="#programming">البرمجة</a>
+          <a href="#general">الخدمات</a>
           <a href="policy.html">السياسات</a>
-          <button class="linkLike" id="openContact" type="button">تواصل سريع</button>
         </div>
       </div>
     </footer>
   </main>
 
-  <!-- Modal: Order -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <!-- Floating WhatsApp -->
+  <div class="waFloat" aria-label="زر واتساب عائم">
+    <button class="waFloat__btn" type="button" id="waFloatBtn" aria-label="فتح خيارات واتساب">
+      واتساب
+      <span class="waFloat__icon">💬</span>
+    </button>
+
+    <div class="waFloat__panel" id="waFloatPanel" aria-hidden="true">
+      <button class="waOpt waOpt--design" type="button"
+        data-wa-dept="design"
+        data-wa-msg="السلام عليكم، أبغى خدمة تصميم من MSH7. نوع الخدمة: ___ / التفاصيل: ">
+        تصميم (0555175322)
+      </button>
+      <button class="waOpt waOpt--programming" type="button"
+        data-wa-dept="programming"
+        data-wa-msg="السلام عليكم، أبغى خدمة برمجة من MSH7. نوع المشروع: ___ / التفاصيل: ">
+        برمجة (0590478098)
+      </button>
+      <button class="waOpt waOpt--general" type="button"
+        data-wa-dept="general"
+        data-wa-msg="السلام عليكم، أبغى خدمة من الخدمات العامة عبر MSH7. نوع الخدمة: ___ / التفاصيل: ">
+        خدمات عامة (0555175322)
+      </button>
+    </div>
+  </div>
+
+  <!-- Quick Request Modal -->
+  <div class="modal" id="quickModal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal__backdrop" data-close="true"></div>
-    <div class="modal__panel">
+    <div class="modal__panel" role="document">
       <div class="modal__head">
         <div>
-          <h3 id="modalTitle">طلب باقة</h3>
-          <p class="muted" id="modalSubtitle">املأ البيانات — وسيتم تجهيز رسالة طلب احترافية جاهزة للإرسال.</p>
+          <h3>طلب سريع</h3>
+          <p>اختر القسم واكتب تفاصيل مختصرة — ثم افتح واتساب برسالة جاهزة.</p>
         </div>
-        <button class="iconBtn" id="closeModal" type="button" aria-label="إغلاق">✕</button>
+        <button class="iconBtn" type="button" data-close="true" aria-label="إغلاق">✕</button>
       </div>
 
-      <form class="form" id="orderForm">
+      <form class="form" id="quickForm">
         <div class="form__row">
           <div class="form__field">
             <label>القسم</label>
-            <input id="fCategory" name="category" type="text" readonly />
+            <select name="dept" required>
+              <option value="design">التصميم</option>
+              <option value="programming">البرمجة</option>
+              <option value="general">الخدمات العامة</option>
+            </select>
           </div>
           <div class="form__field">
-            <label>الباقة</label>
-            <input id="fPackage" name="package" type="text" readonly />
+            <label>الأولوية</label>
+            <select name="priority">
+              <option value="عادي">عادي</option>
+              <option value="مستعجل">مستعجل</option>
+              <option value="VIP">VIP</option>
+            </select>
           </div>
         </div>
 
@@ -469,37 +644,14 @@
           </div>
         </div>
 
-        <div class="form__row">
-          <div class="form__field">
-            <label>البريد الإلكتروني (اختياري)</label>
-            <input name="email" type="email" placeholder="name@email.com" />
-          </div>
-          <div class="form__field">
-            <label>الأولوية</label>
-            <select name="priority">
-              <option value="عادي">عادي</option>
-              <option value="مستعجل">مستعجل</option>
-              <option value="VIP">VIP</option>
-            </select>
-          </div>
-        </div>
-
         <div class="form__field">
           <label>تفاصيل الطلب</label>
-          <textarea name="details" rows="4" placeholder="اشرح المطلوب: الهدف، المخرجات، أمثلة، ملاحظات..." required></textarea>
+          <textarea name="details" rows="4" placeholder="اكتب المطلوب باختصار: الهدف، نوع الخدمة، أي مراجع..." required></textarea>
         </div>
 
         <div class="form__actions">
-          <button class="btn btn--primary" type="submit">تجهيز رسالة الطلب</button>
-          <button class="btn btn--ghost" type="button" id="copyMsg">نسخ الرسالة</button>
-          <a class="btn btn--ghost" id="waLink" href="#" target="_blank" rel="noopener">فتح واتساب</a>
-          <a class="btn btn--ghost" id="mailLink" href="#">فتح إيميل</a>
-        </div>
-
-        <div class="form__result" id="resultBox" hidden>
-          <label>نص الرسالة الجاهزة</label>
-          <textarea id="resultText" rows="6" readonly></textarea>
-          <p class="muted tiny">تقدر تعدل أي سطر ثم ترسله مباشرة.</p>
+          <button class="btn btn--primary" type="submit">فتح واتساب برسالة جاهزة</button>
+          <button class="btn btn--ghost" type="button" data-close="true">إلغاء</button>
         </div>
       </form>
     </div>
